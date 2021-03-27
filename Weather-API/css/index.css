@@ -112,8 +112,8 @@ body {
 }
 
 .today-info {
-    padding: 15px;
-    margin: 0 25px 25px 25px;
+    padding: 15px 15px 5px 15px;
+    margin: 0 25px 5px 25px;
     /* 	box-shadow: 0 0 50px -5px rgba(0, 0, 0, 0.25); */
     /*border-radius: 10px;*/
 }
@@ -163,7 +163,7 @@ body {
 
 .week-list>li .day-name {
     display: block;
-    margin: 10px 0 0 0;
+    margin: 5px 0 0 0;
     text-align: center;
 }
 
@@ -177,16 +177,17 @@ body {
 .week-list>li .day-temp {
     display: block;
     text-align: center;
-    margin: 10px 0 0 0;
+    margin: 5px 0 0 0;
     font-weight: 700;
 }
 
 .location-container {
-    padding: 25px 35px;
+    margin: 140px 0 0 30px;
+    padding: 25px 0;
 }
 
 .location-button {
-    margin: 10px;
+    margin: 4px;
     outline: none;
     box-sizing: border-box;
     width: 40%;

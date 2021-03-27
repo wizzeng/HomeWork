@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <script src="https://unpkg.com/feather-icons"></script>
+<!--    <script src="js/feather.min.js"></script>-->
     <link rel="stylesheet" href="css/index.css">
 </head>
 <body>
@@ -76,7 +76,9 @@
                         <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
                     </svg>
                     <span class="day-name">Tue</span>
-                    <span class="day-temp">29%</span>
+<!--                    <span class="day-temp">29%</span>-->
+                    <span class="day-temp tempMin">21℃</span>
+                    <span class="day-temp tempMax">22℃</span>
                 </li>
                 <li>
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
@@ -85,9 +87,9 @@
                         <path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"></path>
                     </svg>
                     <span class="day-name">Wed</span>
-                    <span class="day-temp">21℃</span>
-                    <span class="tempMin">21℃</span>
-                    <span class="tempMax">22℃</span>
+<!--                    <span class="day-temp">21℃</span>-->
+                    <span class="day-temp tempMin">21℃</span>
+                    <span class="day-temp tempMax">22℃</span>
                 </li>
                 <li>
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
@@ -102,20 +104,23 @@
                         <line x1="16" y1="20" x2="16.01" y2="20"></line>
                     </svg>
                     <span class="day-name">Thu</span>
-                    <span class="day-temp">08°C</span>
+<!--                    <span class="day-temp">08°C</span>-->
+                    <span class="day-temp tempMin">21℃</span>
+                    <span class="day-temp tempMax">22℃</span>
                 </li>
-<!--                <li>-->
-<!--                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"-->
-<!--                         stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"-->
-<!--                         class="feather feather-cloud-rain day-icon">-->
-<!--                        <line x1="16" y1="13" x2="16" y2="21"></line>-->
-<!--                        <line x1="8" y1="13" x2="8" y2="21"></line>-->
-<!--                        <line x1="12" y1="15" x2="12" y2="23"></line>-->
-<!--                        <path d="M20 16.58A5 5 0 0 0 18 7h-1.26A8 8 0 1 0 4 15.25"></path>-->
-<!--                    </svg>-->
-<!--                    <span class="day-name">Fry</span>-->
-<!--                    <span class="day-temp">19°C</span>-->
-<!--                </li>-->
+                <li>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                         stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                         class="feather feather-cloud-rain day-icon">
+                        <line x1="16" y1="13" x2="16" y2="21"></line>
+                        <line x1="8" y1="13" x2="8" y2="21"></line>
+                        <line x1="12" y1="15" x2="12" y2="23"></line>
+                        <path d="M20 16.58A5 5 0 0 0 18 7h-1.26A8 8 0 1 0 4 15.25"></path>
+                    </svg>
+                    <span class="day-name">Thu</span>
+                    <span class="day-temp tempMin">21℃</span>
+                    <span class="day-temp tempMax">22℃</span>
+                </li>
             </ul>
         </div>
         <div class="location-container">
@@ -126,7 +131,7 @@
                     <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
                     <circle cx="12" cy="10" r="3"></circle>
                 </svg>
-                <span>北京</span>
+                <span>BeiJing</span>
             </button>
             <button class="location-button">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
@@ -135,7 +140,7 @@
                     <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
                     <circle cx="12" cy="10" r="3"></circle>
                 </svg>
-                <span>上海</span>
+                <span>ShangHai</span>
             </button>
             <br>
             <button class="location-button">
@@ -145,7 +150,7 @@
                     <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
                     <circle cx="12" cy="10" r="3"></circle>
                 </svg>
-                <span>深圳</span>
+                <span>ShenZhen</span>
             </button>
             <button class="location-button">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
@@ -154,7 +159,7 @@
                     <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
                     <circle cx="12" cy="10" r="3"></circle>
                 </svg>
-                <span>广州</span>
+                <span>GuangZhou</span>
             </button>
         </div>
     </div>
@@ -247,19 +252,28 @@
                 // console.log(updateTime2);
 
                 let dayNames = document.getElementsByClassName('day-name');
-                let dayTemps = document.getElementsByClassName('day-temp');
+                let dayTempMins = document.getElementsByClassName('tempMin');
+                let dayTempMaxs = document.getElementsByClassName('tempMax');
 
                 function showAfterInfo() {
+                    let nowDate = weather3d.daily[0].fxDate;
                     let afterDate = [];
                     let tempMin = [];
-                    let updateTime = [];
+                    let tempMax = [];
+                    let updateTime = ['','','',new Date(nowDate)];
                     for (let i = 0; i < 3; i++) {
                         afterDate[i] = weather3d.daily[i].fxDate;
                         tempMin[i] = weather3d.daily[i].tempMin;
+                        tempMax[i] = weather3d.daily[i].tempMax;
                         updateTime[i] = new Date(afterDate[i]);
                         dayNames[i].innerHTML = getWeekDay(updateTime[i]).slice(0, 3);
-                        dayTemps[i].innerHTML = tempMin[i] +'℃';
+                        dayTempMins[i].innerHTML = tempMin[i] +'℃';
+                        dayTempMaxs[i].innerHTML = tempMax[i] +'℃';
                     }
+                    updateTime[3].setDate(updateTime[0].getDate() + 3);
+                    dayNames[3].innerHTML = getWeekDay(updateTime[3]).slice(0, 3);
+                    dayTempMins[3].innerHTML = tempMin[2] +'℃';
+                    dayTempMaxs[3].innerHTML = tempMax[2] +'℃';
                     // dayNames[0].innerHTML = getWeekDay(updateTime0).slice(0, 3);
                     // dayTemps[0].innerHTML = tempMin0 +'℃';
                     // dayNames[1].innerHTML = getWeekDay(updateTime0).slice(0, 3);
@@ -267,6 +281,7 @@
                     // dayNames[2].innerHTML = getWeekDay(updateTime0).slice(0, 3);
                     // dayTemps[2].innerHTML = tempMin2 +'℃';
                 }
+
                 showAfterInfo();
             });
 
